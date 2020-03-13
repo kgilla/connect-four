@@ -74,7 +74,7 @@ class GameBoard
     puts "\n!!!!! WINNER! WINNER! WINNER! WINNER! !!!!!"
     puts "\nCongrats Player #{@turn}!", "\nWould you like to play again? (Y/N)"
     answer = gets.chomp.upcase
-    new_game = Main.new if answer == "Y"
+    new_game = Main.new if answer == "Y" || "YES"
     exit
   end
 
@@ -111,9 +111,9 @@ class Main
   end
 
   def tie_game
-    puts "Wow you both both lost...", "Want to play again? (Y/N)"
+    puts "\nWow. You both both lost...", "\n Um.. Want to play again?! (Y/N)"
     answer = gets.chomp.upcase
-    new_game = Main.new if answer == "Y"
+    new_game = Main.new if answer == "Y" || "YES"
     exit
   end
 end
